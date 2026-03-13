@@ -1,0 +1,202 @@
+name: "Matra"
+tagline: "Your family's story, told by AI"
+description: >
+  Matra is a family history mobile app. Users record voice conversations
+  with relatives, and AI automatically transcribes the audio, extracts
+  stories and relationships, and generates biographies — building a
+  living, visual family tree over time.
+
+brand:
+  colors:
+    primary: "#f7f2ea"      # Warm cream (backgrounds)
+    secondary: "#1a1a1a"    # Near-black (text)
+    accent: "#C49A3C"       # Gold (highlights)
+    green: "#16431c"        # Forest green (sparingly)
+  logo: "assets/matra/logo.png"
+  font: "assets/fonts/Poppins-Medium.ttf"
+  font_bold: "assets/fonts/Poppins-SemiBold.ttf"
+  font_regular: "assets/fonts/Poppins-Regular.ttf"
+
+social:
+  facebook_page_name: "Matra"
+  instagram_handle: "matra"
+  hashtags:
+    - "#FamilyHistory"
+    - "#FamilyStories"
+    - "#GrandparentsDay"
+    - "#FamilyTree"
+    - "#OralHistory"
+    - "#Heritage"
+    - "#FamilyMemories"
+    - "#PreserveYourStory"
+    - "#MatraApp"
+    - "#AIFamily"
+    - "#LivingHistory"
+    - "#GrandmaStories"
+    - "#FamilyLegacy"
+    - "#KnowYourRoots"
+
+reels_per_day: 3
+clips_per_reel: 1
+clip_duration_sec: 5
+
+schedule:
+  times: ["08:00", "14:00", "20:00"]
+
+# -------------------------------------------------------------------
+# THEMES — each theme defines a visual concept for video generation.
+# The prompter will pick themes in rotation or randomly and can use
+# Groq to create variations so prompts don't repeat.
+# -------------------------------------------------------------------
+themes:
+  - name: "Porch Stories"
+    mood: "warm, nostalgic, golden hour"
+    prompt_template: >
+      Slow cinematic dolly shot of an elderly woman with silver hair in a weathered
+      wooden Adirondack chair on a wraparound porch, speaking warmly, gesturing gently.
+      Golden hour sunlight filtering through oak leaves, dappled warm light on her face
+      and cream-painted railings. Lush forest green foliage softly blurred behind,
+      shallow depth of field, dust motes in sunlight, intimate documentary portrait.
+
+  - name: "Living Family Tree"
+    mood: "magical, awe-inspiring, organic"
+    prompt_template: >
+      Cinematic macro shot slowly pushing in on a luminous golden family tree growing
+      from aged leather-bound book on dark oak table. Delicate branches with soft
+      glowing oval frames at each node. Deep forest green background, tiny golden
+      particles drifting like fireflies, warm amber lighting from below, rich worn
+      leather texture, shallow depth of field, magical realism.
+
+  - name: "Voice Waves to Text"
+    mood: "modern, intimate, transformative"
+    prompt_template: >
+      Close-up of person's lips speaking softly, golden sound wave ripples emanating
+      outward, gradually morphing into elegant dark ink cursive forming stroke by stroke
+      on aged cream parchment. Warm soft lighting from left, shallow depth of field,
+      warm bokeh background. Camera slowly tracks the transformation, gold and cream
+      and forest green tones, documentary style with magic realism.
+
+  - name: "Generations Connect"
+    mood: "emotional, heartfelt, bridging time"
+    prompt_template: >
+      Medium shot of elderly grandfather beside young grandchild on cream linen couch.
+      Grandfather speaks animatedly, golden luminous threads weave between them forming
+      delicate tree-branch pattern. Soft warm window light from right, gentle shadows,
+      forest green damask wallpaper blurred behind, dust motes in light beam, cinematic
+      emotional portrait, warm amber and green palette.
+
+  - name: "Photo Album Awakens"
+    mood: "magical, nostalgic, wonder"
+    prompt_template: >
+      Close-up of antique leather photo album with gold-embossed edges slowly opening
+      on dark wooden table. Sepia photographs on thick cream pages glow with warm
+      golden light, edges lifting gently. Warm light between pages illuminates floating
+      dust motes. Camera slowly pushes in, rich textures of aged paper, cracked leather,
+      tarnished gold clasps, forest green velvet beneath, nostalgic magical realism.
+
+  - name: "Kitchen Table Talk"
+    mood: "authentic, domestic, cozy"
+    prompt_template: >
+      Slow overhead shot of rustic oak kitchen table, weathered hands gesturing
+      expressively, surrounded by white ceramic coffee cups, scattered black-and-white
+      photographs, worn leather journal. Golden morning light through sheer cream
+      curtains, long soft shadows on detailed wood grain. Cream and forest green tiles
+      at frame edge, intimate documentary feel, shallow depth of field.
+
+  - name: "Letters Through Time"
+    mood: "reflective, historical, poetic"
+    prompt_template: >
+      Handwritten letters and aged postcards with curled edges floating weightlessly
+      in warm golden light against deep forest green background. Dark ink flows forming
+      elegant cursive on cream paper with visible fiber texture. Camera drifts through
+      floating correspondence, golden particles like dust motes, ethereal cinematic
+      macro, extremely shallow depth of field, calligraphy forming in foreground.
+
+  - name: "Heritage Roots"
+    mood: "grounded, cultural, powerful"
+    prompt_template: >
+      Cinematic aerial slowly pulling back, luminous golden tree roots spreading
+      through dark rich earth underground. Each root connects to softly glowing oval
+      frame embedded in soil emitting warm amber light. Rich brown earth, forest green
+      moss textures, scattered golden particles in soil layers. Massive oak trunk base
+      visible above, epic natural lighting, earth tones with gold and deep green.
+
+  - name: "Record Button Moment"
+    mood: "modern, intimate, call-to-action"
+    prompt_template: >
+      Extreme close-up of smartphone in weathered elderly hands, screen showing large
+      circular golden record button. Finger slowly presses button, golden sound wave
+      ripples emanate in concentric circles through forest green and gold. Warm
+      cream-toned living room with bookshelves softly blurred behind, shallow depth
+      of field, warm side lighting, cinematic intimate portrait.
+
+  - name: "Grandmother's Hands"
+    mood: "tender, detail-oriented, timeless"
+    prompt_template: >
+      Cinematic close-up of weathered elderly hands with wrinkles and age spots gently
+      holding a faded sepia photograph with dog-eared corners. Warm golden light from
+      nearby window catches fine skin texture and photograph surface. Cream linen
+      tablecloth beneath, dark forest green wall softly blurred behind. Extremely
+      shallow depth of field focused on fingertips, slow subtle camera drift, warm
+      amber and cream palette, dust motes in light beam, intimate documentary portrait.
+
+# -------------------------------------------------------------------
+# TEXT OVERLAYS — randomly selected per reel; applied in post-processing
+# -------------------------------------------------------------------
+text_overlays:
+  cta_lines:
+    - "Record. Remember. Relive."
+    - "Every voice tells a story."
+    - "Your family tree, powered by AI."
+    - "Talk. Transcribe. Treasure."
+    - "Grandma's stories deserve more than memory."
+    - "Press record. Preserve forever."
+    - "One conversation. A lifetime of stories."
+    - "Before the stories fade, capture them."
+    - "Your heritage deserves to be heard."
+    - "Turn family conversations into legacy."
+    - "The stories only they can tell."
+    - "Don't let their stories disappear."
+    - "Every family has an untold epic."
+    - "Your roots run deeper than you know."
+    - "Some stories are too important to forget."
+
+  hashtag_sets:
+    - "#FamilyHistory #PreserveYourStory #MatraApp"
+    - "#GrandmaStories #FamilyTree #OralHistory"
+    - "#FamilyLegacy #Heritage #KnowYourRoots"
+    - "#FamilyMemories #LivingHistory #MatraApp"
+
+# -------------------------------------------------------------------
+# GROQ PROMPT EXPANSION — used to generate fresh prompt variations
+# so reels don't repeat visually. The prompter sends theme + mood to
+# Groq and gets back a unique video prompt each time.
+# -------------------------------------------------------------------
+groq:
+  system_prompt: >
+    You are a creative director for short-form vertical video reels.
+    You generate structured JSON storyboards for Matra — a family
+    history app where users record voice conversations with relatives
+    and AI builds their family tree. Brand uses warm cream backgrounds,
+    black text, and gold accents. Clean, modern, elegant.
+
+    You have two production tools:
+    1. Wan2.1 AI Video — generates 5-second cinematic video clips from
+       text prompts (60-90 words, densely packed visual detail, NO text/words
+       in the scene).
+    2. Creative Engine — renders animated text slides, title cards, and
+       CTA screens with clean typography on warm cream backgrounds.
+
+    Write copy like a real person, not a marketer. Be specific and emotional.
+    Think: "She told me how they met. I never thought to ask before."
+    NOT: "Preserve your family legacy today!"
+    Create 20-25 second reels that feel genuine and make people think
+    about their own family.
+
+# -------------------------------------------------------------------
+# ASSETS — decorative PNGs that the director can place on text slides.
+# Each key is the asset name the director references in storyboards.
+# Values are paths (relative to project root) to transparent PNGs.
+# -------------------------------------------------------------------
+assets:
+  chair: "assets/matra/chair.png"
