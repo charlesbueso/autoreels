@@ -1,0 +1,141 @@
+# Curated catalog of REAL, verified endgame teaching positions.
+# Each entry covers ONE concept with 3-5 board diagrams (FENs) that build
+# the lesson progressively. The LLM only writes the narration around them.
+#
+# All FENs are validated by scripts/verify_endgame_concepts.py — never edit
+# by hand without re-running it.
+
+- id: opposition
+  name: "The Opposition"
+  param: "opposition"
+  positions:
+    - fen: "8/8/4k3/8/4P3/4K3/8/8 w - - 0 1"
+      title: "King and pawn vs king"
+      body: "White wants to push the pawn forward. With kings two squares apart on the same file, whoever is to MOVE has the disadvantage — that is 'the opposition.'"
+    - fen: "8/8/4k3/4P3/4K3/8/8/8 b - - 0 1"
+      title: "Pawn pushed, king follows"
+      body: "Black has the opposition (white just moved). Black plays ...Kd6 or ...Kf6 to stop the white king from escorting the pawn forward."
+    - fen: "4k3/8/3K4/4P3/8/8/8/8 b - - 0 1"
+      title: "White wins the opposition"
+      body: "With the king IN FRONT of the pawn and the move passed to Black, White will get the key squares (d7/e7/f7) and shepherd the pawn home."
+  takeaway: "In king-and-pawn endings, who must move usually loses. Count squares before you commit to a push — sometimes a waiting move beats a 'forward' move."
+
+- id: rule_of_the_square
+  name: "The Rule of the Square"
+  param: "rule of the square"
+  positions:
+    - fen: "7k/8/8/P7/8/8/8/7K w - - 0 1"
+      title: "The pawn runs alone"
+      body: "Draw an imaginary square from the pawn to the promotion square — for the a5 pawn, that's a5-d5-d8-a8. If the enemy king is OUTSIDE the square and it's the pawn-pusher's move, the pawn promotes."
+    - fen: "3k4/8/8/P7/8/8/8/7K b - - 0 1"
+      title: "King inside the square"
+      body: "Now the black king is on d8 — inside the square. Black to move plays ...Kc7, then ...Kb6, then ...Kxa5 (or ...Kb7 stopping a8). The king catches the pawn."
+    - fen: "5k2/8/8/P7/8/8/8/7K b - - 0 1"
+      title: "One square too far"
+      body: "Black king on f8 is just outside the square. Even with the move, ...Ke7 ...Kd6 ...Kc5 is one tempo too slow — the pawn queens on a8."
+  takeaway: "Count files between the pawn and the enemy king. If the king is outside the square and the pawn-pusher is on move, don't even calculate — push."
+
+- id: passed_pawn_promotion
+  name: "Promoting a Passed Pawn"
+  param: "passed pawn promotion"
+  positions:
+    - fen: "8/3P4/8/2k5/8/8/8/4K3 w - - 0 1"
+      title: "One square from promotion"
+      body: "White's pawn on d7 is one move from queening. The black king on c5 is too far away — d8=Q next move."
+    - fen: "8/8/3P4/2k5/8/8/8/4K3 b - - 0 1"
+      title: "Race begins"
+      body: "Pawn on d6, black king on c5. Black would need ...Kc6 to stop the pawn, but White pushes d7 first. Then Kxd7 only works if the white king is too far — here it isn't."
+    - fen: "8/8/8/2kP4/8/8/4K3/8 w - - 0 1"
+      title: "King escort wins"
+      body: "When the pawn is far from queening, a single king can stop it. But escort the pawn with your own king and you control the key squares — the pawn promotes safely."
+  takeaway: "An unescorted passed pawn promotes only if the enemy king is outside the square. Otherwise: bring your king. The king is a fighting piece in the endgame."
+
+- id: king_activity
+  name: "King Activity"
+  param: "king activity"
+  positions:
+    - fen: "8/8/8/8/8/3k4/8/3K4 w - - 0 1"
+      title: "Passive king, lost battle"
+      body: "Black's king has marched up the board while White's king sits on the back rank. In endgames, every tempo your king spends near the back rank is wasted."
+    - fen: "8/8/8/3k4/8/3K4/8/8 w - - 0 1"
+      title: "Centralize first"
+      body: "Both kings are centralized — this is the picture you want before pushing pawns. The king controls 8 squares and supports advances on either flank."
+    - fen: "8/8/4k3/3p4/3P4/4K3/8/8 w - - 0 1"
+      title: "Active king wins pawns"
+      body: "With centralized kings, the side whose king reaches the weak pawns first wins. Here White plays Kd3-Kc4 to attack d5 — Black must defend passively."
+  takeaway: "In the endgame, your king is an attacker. Move it toward the center the moment the queens come off — the player with the more active king almost always wins."
+
+- id: back_rank_vulnerabilities
+  name: "Back-Rank Vulnerabilities"
+  param: "back-rank vulnerabilities"
+  positions:
+    - fen: "6k1/5ppp/8/8/8/8/8/R6K w - - 0 1"
+      title: "Classic back-rank mate"
+      body: "Black's king is hemmed in by its own f7-g7-h7 pawns. White plays Ra8# — there is no escape because every flight square is covered by Black's own pieces."
+    - fen: "6k1/5pp1/7p/8/8/8/8/R6K w - - 0 1"
+      title: "A luft saves the king"
+      body: "By pushing h6, Black created an escape square on h7. Now Ra8+ is met by ...Kh7. One tempo on h2-h3 or g2-g3 in the middlegame can prevent disasters like the previous slide."
+    - fen: "5rk1/5ppp/8/8/8/8/8/R6K w - - 0 1"
+      title: "A defender on the back rank"
+      body: "Black has a rook on f8 covering the back rank. Now Ra8 is met by Rxa8 — no mate. Whenever the back rank is shaky, getting a rook (or queen) to defend it is priority one."
+  takeaway: "Back-rank weaknesses decide thousands of games. Make luft (h3, g3, or f3) when you castle, and never leave the 8th rank undefended once heavy pieces come off."
+
+- id: opposite_color_bishops_draw
+  name: "Opposite-Color Bishops"
+  param: "bishop of opposite color"
+  positions:
+    - fen: "8/8/4k3/4p3/4P3/3B4/8/3K4 w - - 0 1"
+      title: "Locked into one color"
+      body: "White's bishop on d3 only ever touches light squares. The pawns are blocked on dark squares — White's bishop literally cannot interact with the action."
+    - fen: "8/8/4k3/4p3/4P3/2b5/8/3K4 w - - 0 1"
+      title: "Black's bishop, same problem"
+      body: "Symmetrically, Black's dark-squared bishop can't attack White's light-squared pawn. Each side has a 'colorblind' bishop in this endgame."
+    - fen: "8/8/2P1k3/4p3/2b1P3/8/8/3K4 w - - 0 1"
+      title: "Extra pawn doesn't matter"
+      body: "White is up a pawn, but with opposite-colored bishops the defender just blockades on the safe color. Many such endings are DRAWN even two pawns up."
+  takeaway: "Opposite-colored bishop endgames are the great equalizer. If you're worse, head for them. If you're better, AVOID them — your extra material is often meaningless."
+
+- id: rook_activity
+  name: "Active Rook"
+  param: "rook activity"
+  positions:
+    - fen: "8/8/8/3k4/8/8/r7/3K3R w - - 0 1"
+      title: "Two rooks, two roles"
+      body: "Black's rook on a2 attacks pawns from behind. White's rook on h1 is passive. In rook endgames, the rook that ATTACKS something is worth far more than the rook that defends."
+    - fen: "R7/8/8/3k4/8/8/4r3/3K4 w - - 0 1"
+      title: "Behind the passed pawn"
+      body: "The principle is so important it has a name: 'Rooks belong behind passed pawns.' Whether it's your pawn (pushing it) or theirs (slowing it), behind is always better than in front."
+    - fen: "8/8/8/8/4k3/8/4r3/R3K3 w - - 0 1"
+      title: "Cut off the king"
+      body: "White's rook on a1 cuts the black king off from the a-file. Even a single tempo of king-cutoff often wins or draws a tough rook endgame."
+  takeaway: "Rooks need open files, pawns to attack, and squares behind passers. A rook tied to passive defense is barely better than no rook at all."
+
+- id: lucena_position
+  name: "The Lucena Position"
+  param: "Lucena position"
+  positions:
+    - fen: "1K6/1P4k1/8/8/8/8/r7/2R5 w - - 0 1"
+      title: "The textbook winning position"
+      body: "White's king is in front of the pawn on the 8th rank. The black king is cut off on the kingside. White is up a pawn AND has a rook — the only problem is getting the king out from in front of the pawn."
+    - fen: "1K6/1P6/8/8/3R4/8/r7/6k1 w - - 0 1"
+      title: "Building the bridge"
+      body: "1.Rd4! is the famous 'bridge.' The rook will shield the king from checks on the 4th rank once it walks out via b8-c7-d6."
+    - fen: "8/1P6/2K5/3R4/8/8/r7/6k1 b - - 0 1"
+      title: "The bridge holds"
+      body: "Now ...Rc2+ Kd6, ...Rd2+ Rxd2 — the rook on d4 blocks the check. The white king escorts the pawn home. This pattern is the most important rook-endgame technique to memorize."
+  takeaway: "Lucena = win. Pawn on the 7th, your king in front, enemy king cut off — learn the bridge maneuver and you will convert these endings every time."
+
+- id: philidor_position
+  name: "The Philidor Position"
+  param: "Philidor position"
+  positions:
+    - fen: "3k4/8/3K4/3P4/8/r7/8/3R4 b - - 0 1"
+      title: "The defender's holy grail"
+      body: "Black is a pawn down with the enemy king and pawn advancing. The Philidor technique: keep your rook on the 3rd rank (from your perspective, the 6th here) to deny the white king the 6th rank."
+    - fen: "3k4/8/3K4/3P4/8/3r4/8/8 w - - 0 1"
+      title: "Third-rank defense"
+      body: "Black's rook on the 3rd rank stops the white king from advancing. When White pushes the pawn — say 1.d6 — the rook drops back: ...Ra3-Ra1, then it gives checks from behind."
+    - fen: "3k4/8/3KP3/8/8/8/r7/8 w - - 0 1"
+      title: "Checking from behind"
+      body: "Once the pawn passes Black's 3rd rank, the rook switches to checking the white king from the long side. With no shelter from checks, the position is drawn."
+  takeaway: "Philidor = draw. Rook on the 3rd rank until the pawn advances, then check from behind. Memorize this — it's the most common rook-endgame defensive technique."

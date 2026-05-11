@@ -1,0 +1,23 @@
+# "X Chess Cheat Codes" listicle carousel — matches the golf reference aesthetic.
+slides:
+  min: 6
+  max: 9
+  cover: true
+  cta: true
+
+cover:
+  layout: cover_listicle
+  hook_max_words: 8           # e.g. "7 Chess Cheat Codes:"
+  mascot_pose_tag: pointing_up
+
+items:
+  count_min: 4
+  count_max: 7
+  layout: numbered_item
+  title_max_words: 7
+  body_max_words: 28
+  illustration: true          # AI image illustrating the concept
+
+cta:
+  layout: cta_card
+  mascot_pose_tag: thumbs_up

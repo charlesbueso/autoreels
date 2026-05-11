@@ -1,48 +1,50 @@
-# AutoReels Global Settings
-# Secrets are loaded from .env.local — never commit tokens here
-
-output_dir: "output"
-log_level: "INFO"
-
-video:
-  width: 480
-  height: 832
-  native_width: 480
-  native_height: 832
-  fps: 16
-  clip_duration_sec: 5
-  clips_per_reel: 1
-  num_inference_steps: 35
-  guidance_scale: 7.0
-  codec: "libx264"
-  crf: 23
-  max_file_size_mb: 25
-
-# Director mode — Groq creates storyboards with multiple segments.
-# Each AI video clip is clip_duration_sec; total reel is 15-30 seconds
-# composed of video clips + creative-coded text slides + transitions.
-director:
-  enabled: true
-  reel_duration_min: 15
-  reel_duration_max: 30
-
-model:
-  backend: modal
+# Global runtime settings for chessbrain-content
+output_dir: output
+data_dir: data
+image_cache_dir: data/image_cache
 
 schedule:
-  times: ["08:00", "14:00", "20:00"]
-  timezone: "America/New_York"
+  timezone: America/New_York
+  slots:           # 3 posts/day
+    - "08:00"
+    - "13:00"
+    - "19:00"
 
-groq:
-  model: "llama-3.3-70b-versatile"
+canvas:
+  carousel:
+    width: 1080
+    height: 1350    # 4:5 — universal IG fit
+  reel:
+    width: 1080
+    height: 1920
+  safe_margin: 96   # px padding from edges
+
+llm:
+  provider: groq
+  model: llama-3.3-70b-versatile
   max_tokens: 2048
+  temperature: 0.85
+  json_retries: 3
 
-audio:
-  enabled: true
-  narration_enabled: true
-  music_enabled: true
-  voice: "random"                    # "random" picks a different voice each reel, or set a specific voice name
-  music_volume_db: -8               # background music level (quieter = more negative)
-  narration_volume_db: 0            # narration level relative to default
-  duck_music_db: -6                 # extra music reduction during narration
-  music_dir: "assets/music"         # directory with royalty-free .mp3/.wav tracks
+embeddings:
+  provider: openai
+  model: text-embedding-3-small
+  dim: 1536
+
+similarity_gate:
+  threshold: 0.85       # cosine sim above which a candidate is rejected
+  loosened: 0.90        # used after max_attempts
+  max_attempts: 3
+  lookback_days: 90
+
+imagegen:
+  default_model: nano_banana
+  fallback_model: flux_dev
+  cover_model: flux_pro
+  text_in_image_model: ideogram_v3
+  monthly_budget_usd: 30.0
+
+reels:
+  cadence_days: 10
+  duration_sec: 15
+  fps: 30

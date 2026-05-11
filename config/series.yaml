@@ -1,0 +1,142 @@
+# Recurring weekday series that iterate one parameter to guarantee novelty.
+# Each list item is a "param" the director cycles through (no repeat within 12 weeks).
+
+mascot_monday:
+  description: Single-image post of the mascot in a different environment/weather every week.
+  rotation_floor_weeks: 12
+  params:
+    - rainy city street with neon reflections
+    - snowy mountain cabin at dusk
+    - sunny tropical beach with palm trees
+    - autumn forest with falling leaves
+    - desert canyon at golden hour
+    - cyberpunk neon arcade
+    - cozy library at midnight, stacks of books
+    - espresso bar at dawn, steam rising from cups
+    - foggy lighthouse cliff at sunrise
+    - space station window, earth in background
+    - jungle waterfall with parrots
+    - subway platform, late night
+    - rooftop garden at sunset
+    - ski lift in falling snow
+    - greenhouse full of tropical plants
+    - vintage train compartment, countryside passing by
+    - chess club basement, vintage clocks on shelves
+    - astronaut moonwalk, planted flag with chess king
+    - underwater coral reef, fish drifting
+    - thunderstorm at the front porch, mug of tea
+    - hot air balloon over patchwork fields
+    - art deco hotel lobby
+    - bookstore aisle, shafts of afternoon light
+    - winter ice rink at night
+    - rural farm kitchen, morning sunlight
+    - park bench in autumn rain, holding a chess book
+    - tokyo street at night, vending machines glowing
+    - vintage barbershop chair
+    - amusement park ferris wheel at twilight
+    - art studio with paint-splattered chess pieces
+    - mountain cable car, snow peaks below
+    - city park in cherry blossom season
+    - antarctic penguin colony
+    - hot springs bath, snow falling
+    - volcanic island lookout
+    - rainy hammock between two trees
+    - fireplace at a ski lodge
+    - autumn pumpkin patch
+    - venetian gondola at twilight
+    - planetarium dome with stars projected
+
+tactic_tuesday_headliner:
+  description: Daily puzzle headliner cycles through tactical themes.
+  rotation_floor_weeks: 6
+  params:
+    - fork
+    - pin
+    - skewer
+    - discoveredAttack
+    - doubleAttack
+    - mateIn2
+    - mateIn3
+    - sacrifice
+    - deflection
+    - decoy
+    - trappedPiece
+    - xRayAttack
+    - zugzwang
+    - clearance
+    - backRankMate
+    - smotheredMate
+
+wisdom_wednesday:
+  description: GM quote card cycles through famous players.
+  rotation_floor_weeks: 8
+  params:
+    - { author: "Bobby Fischer", quote: "Tactics flow from a superior position." }
+    - { author: "Mikhail Tal", quote: "You must take your opponent into a deep dark forest where 2+2=5." }
+    - { author: "Magnus Carlsen", quote: "I don't believe in psychology. I believe in good moves." }
+    - { author: "Savielly Tartakower", quote: "The blunders are all there on the board, waiting to be made." }
+    - { author: "Aron Nimzowitsch", quote: "The threat is stronger than the execution." }
+    - { author: "Emanuel Lasker", quote: "When you see a good move, look for a better one." }
+    - { author: "José Raúl Capablanca", quote: "A good player is always lucky." }
+    - { author: "Garry Kasparov", quote: "Chess is mental torture." }
+    - { author: "Anatoly Karpov", quote: "Chess is everything: art, science, and sport." }
+    - { author: "Siegbert Tarrasch", quote: "Before the endgame, the gods have placed the middlegame." }
+    - { author: "Vladimir Kramnik", quote: "Chess is a sea in which a gnat may drink and an elephant may bathe." }
+    - { author: "Hikaru Nakamura", quote: "I think it's important to stay sharp." }
+
+throwback_thursday:
+  description: Famous historical games to highlight.
+  rotation_floor_weeks: 12
+  params:
+    - "Anderssen vs Kieseritzky 1851 — Immortal Game"
+    - "Morphy vs Duke of Brunswick 1858 — Opera Game"
+    - "Byrne vs Fischer 1956 — Game of the Century"
+    - "Kasparov vs Topalov 1999 — Kasparov's Immortal"
+    - "Tal vs Botvinnik 1960 game 6"
+    - "Capablanca vs Tartakower 1924"
+    - "Karpov vs Kasparov 1985 game 16"
+    - "Spassky vs Fischer 1972 game 6"
+    - "Aronian vs Anand 2013 — Wijk aan Zee"
+    - "Carlsen vs Karjakin 2016 game 10"
+    - "Reti vs Alekhine 1925"
+    - "Polgar vs Karpov 2003"
+
+cheat_saturday:
+  description: Listicle topics for Saturday cheat-codes carousels.
+  rotation_floor_weeks: 8
+  params:
+    - opening principles
+    - middlegame planning
+    - rook endgames
+    - king and pawn endgames
+    - bishop pair
+    - knight outposts
+    - pawn breaks
+    - prophylaxis
+    - time management on Lichess
+    - trading rules
+    - attacking the king
+    - defensive resources
+    - calculation habits
+    - blunder-check routines
+    - opening repertoire building
+    - studying your own losses
+
+endgame_sunday:
+  description: Endgame concepts for Sunday carousels.
+  rotation_floor_weeks: 8
+  params:
+    - opposition
+    - rule of the square
+    - Lucena position
+    - Philidor position
+    - Vancura defense
+    - rook activity
+    - bishop of opposite color
+    - same-color bishops
+    - knight versus bishop
+    - passed pawn promotion
+    - king activity
+    - tempo and zugzwang
+    - fortress drawing technique
+    - back-rank vulnerabilities

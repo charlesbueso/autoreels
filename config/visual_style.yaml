@@ -1,0 +1,44 @@
+# Locked visual style applied to every AI image generation request.
+# Tunable via `chessbrain imagegen calibrate`.
+
+style_suffix: >
+  flat vector illustration, soft cream background #F7F2EA, bold clean line art,
+  gentle pastel palette with deep navy #1F2A44 accents and warm gold #C49A3C highlights,
+  friendly rounded shapes, subtle paper-grain texture, centered composition with
+  generous negative space at top and bottom for text overlay, modern editorial
+  illustration style, professional, no text, no letters
+
+negative_prompt: >
+  text, letters, words, watermark, signature, logo, photograph, photoreal, 3d render,
+  harsh shadows, gritty, dark, busy background, cluttered, low quality, blurry,
+  distorted, extra limbs, deformed, ugly
+
+palette:
+  bg_primary: "#F7F2EA"
+  bg_alt: "#FBF8F2"
+  ink: "#1F2A44"
+  accent: "#C49A3C"
+  accent_soft: "#E2C079"
+  positive: "#3F7D58"
+  negative: "#C0392B"
+
+mascot_style_lock: >
+  IMPORTANT: keep the EXACT same mascot character from the reference image —
+  a friendly cartoon pink brain (bubblegum-pink, glossy, with visible cerebral
+  folds), big round black eyes with white highlights, a wide cheerful smile,
+  small rosy pink cheek blush, short pink arms and legs, and a black chess
+  king piece balanced on top of the head as a crown. preserve the exact body
+  shape, proportions, colors, and facial features of the reference. only the
+  pose, outfit accessories (hats, scarves, items being held), and surrounding
+  environment may change. do NOT redesign the mascot as a chess piece, golf
+  ball, egg, or any other character. flat cartoon vector style with bold
+  black outlines, matching the reference.
+
+aspect_ratios:
+  carousel: "4:5"
+  reel: "9:16"
+  square: "1:1"
+
+# Seed strategy: per recurring-series we deterministic-seed by series_id+iteration so
+# variations stay coherent within a series but never repeat exact images.
+seed_strategy: deterministic_per_series

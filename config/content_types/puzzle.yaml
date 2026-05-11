@@ -1,0 +1,24 @@
+# Tactical puzzle drawn from Lichess Puzzle DB.
+slides:
+  min: 5
+  max: 5
+  cover: true
+  cta: true
+
+target_rating_range: [1300, 1700]
+preferred_themes:
+  - fork
+  - pin
+  - skewer
+  - mateIn2
+  - discoveredAttack
+  - sacrifice
+
+structure:
+  - { layout: cover_puzzle, role: hook, mascot_pose_tag: thinking }
+  - { layout: board_only, role: position }
+  - { layout: board_only, role: solution_step1 }     # arrow on best move
+  - { layout: board_explainer, role: solution_explain }
+  - { layout: cta_card, role: cta }
+
+show_lichess_attribution: true

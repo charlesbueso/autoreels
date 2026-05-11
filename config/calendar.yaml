@@ -1,0 +1,39 @@
+# Maps weekday + slot index → content_type with optional series binding.
+# Slot indexes match settings.schedule.slots (0=morning, 1=midday, 2=evening).
+
+# Each entry: { type: <content_type_name>, series: <series_name or null> }
+
+monday:
+  - { type: mascot_scene, series: mascot_monday }
+  - { type: puzzle, series: null }
+  - { type: cheat_codes, series: cheat_saturday }      # reuse pool
+
+tuesday:
+  - { type: opening_trap, series: null }
+  - { type: puzzle, series: tactic_tuesday_headliner }
+  - { type: quote, series: wisdom_wednesday }   # was: meme (disabled)
+
+wednesday:
+  - { type: quote, series: wisdom_wednesday }
+  - { type: endgame, series: endgame_sunday }
+  - { type: product_demo, series: null }
+
+thursday:
+  - { type: opening_trap, series: throwback_thursday }
+  - { type: puzzle, series: null }
+  - { type: cheat_codes, series: cheat_saturday }
+
+friday:
+  - { type: product_demo, series: null }
+  - { type: mascot_scene, series: mascot_monday }      # off-cycle one-off
+  - { type: cheat_codes, series: cheat_saturday }   # was: meme (disabled)
+
+saturday:
+  - { type: cheat_codes, series: cheat_saturday }
+  - { type: puzzle, series: null }
+  - { type: opening_trap, series: null }   # was: meme (disabled)
+
+sunday:
+  - { type: endgame, series: endgame_sunday }
+  - { type: quote, series: wisdom_wednesday }
+  - { type: product_demo, series: null }

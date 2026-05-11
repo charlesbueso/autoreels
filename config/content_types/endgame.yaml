@@ -1,0 +1,7 @@
+slides: { min: 5, max: 7, cover: true, cta: true }
+cover: { layout: cover_listicle, mascot_pose_tag: lecturing }
+steps:
+  count_min: 3
+  count_max: 5
+  layout: board_explainer
+cta: { layout: cta_card, mascot_pose_tag: trophy }
