@@ -1,0 +1,48 @@
+# AutoReels Global Settings
+# Secrets are loaded from .env.local — never commit tokens here
+
+output_dir: "output"
+log_level: "INFO"
+
+video:
+  width: 480
+  height: 832
+  native_width: 480
+  native_height: 832
+  fps: 16
+  clip_duration_sec: 5
+  clips_per_reel: 1
+  num_inference_steps: 35
+  guidance_scale: 7.0
+  codec: "libx264"
+  crf: 23
+  max_file_size_mb: 25
+
+# Director mode — Groq creates storyboards with multiple segments.
+# Each AI video clip is clip_duration_sec; total reel is 15-30 seconds
+# composed of video clips + creative-coded text slides + transitions.
+director:
+  enabled: true
+  reel_duration_min: 15
+  reel_duration_max: 30
+
+model:
+  backend: modal
+
+schedule:
+  times: ["08:00", "14:00", "20:00"]
+  timezone: "America/New_York"
+
+groq:
+  model: "llama-3.3-70b-versatile"
+  max_tokens: 2048
+
+audio:
+  enabled: true
+  narration_enabled: true
+  music_enabled: true
+  voice: "random"                    # "random" picks a different voice each reel, or set a specific voice name
+  music_volume_db: -8               # background music level (quieter = more negative)
+  narration_volume_db: 0            # narration level relative to default
+  duck_music_db: -6                 # extra music reduction during narration
+  music_dir: "assets/music"         # directory with royalty-free .mp3/.wav tracks

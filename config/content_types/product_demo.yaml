@@ -1,0 +1,24 @@
+# Procedurally-rendered Discord channel mockup carousel.
+slides:
+  min: 5
+  max: 7
+  cover: true
+  cta: true
+
+cover:
+  layout: cover_product
+  mascot_pose_tag: pointing_up
+
+mocks:
+  count_min: 3
+  count_max: 4
+  layout: discord_mock_slide   # rendered procedurally, not AI
+  show_commands:
+    - "/setup"
+    - "/ask"
+    - "/board"
+    - "/billing"
+
+cta:
+  layout: cta_card
+  mascot_pose_tag: thumbs_up

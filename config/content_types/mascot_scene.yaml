@@ -1,0 +1,13 @@
+# Single mascot-in-environment image (Mascot Monday).
+slides:
+  min: 1
+  max: 1
+  cover: false
+  cta: false                # CTA included as overlay on the single image
+
+cover_overlay:
+  hook_max_words: 9
+  cta_max_words: 6
+
+image_model: nano_banana    # mascot consistency
+require_mascot_reference: true

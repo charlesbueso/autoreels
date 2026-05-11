@@ -1,0 +1,56 @@
+name: Chess Brain
+domain: chessbrain.coach
+tagline: A Chess Brain for Every Game
+short_pitch: AI coach that posts engine-verified analysis of every Lichess game to your Discord.
+cta_primary: Start 7-day free trial
+cta_url: https://chessbrain.coach/checkout
+cta_short: chessbrain.coach
+discord_invite: https://chessbrain.coach/checkout
+
+palette:
+  bg_cream: "#F7F2EA"
+  ink: "#1A1A1A"
+  navy: "#1F2A44"
+  gold: "#C49A3C"
+  gold_soft: "#E2C079"
+  green: "#3F7D58"
+  red: "#C0392B"
+  off_white: "#FBF8F2"
+
+fonts:
+  display: assets/fonts/Poppins-Bold.ttf
+  display_alt: assets/fonts/Poppins-SemiBold.ttf
+  body: assets/fonts/Poppins-Medium.ttf
+  body_light: assets/fonts/Poppins-Regular.ttf
+  mono: assets/fonts/Poppins-Medium.ttf  # placeholder until JetBrains Mono added
+
+logos:
+  primary: assets/logos/chessbrain-logo.png
+  svg: assets/logos/chessbrain-logo.svg
+
+mascot:
+  base: assets/mascot/base.png
+  poses_dir: assets/mascot/poses
+
+watermark:
+  enabled: true
+  position: bottom_right
+  opacity: 0.6
+  scale: 0.08
+
+hashtags:
+  default:
+    - "#chess"
+    - "#lichess"
+    - "#chessimprovement"
+    - "#chesstips"
+    - "#chesscoach"
+    - "#chessbrain"
+    - "#discordbot"
+  puzzle:
+    - "#chesspuzzle"
+    - "#chesstactics"
+  endgame:
+    - "#chessendgame"
+  opening:
+    - "#chessopening"

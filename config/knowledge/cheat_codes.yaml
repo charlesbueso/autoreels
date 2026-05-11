@@ -1,0 +1,85 @@
+# Hand-curated reservoir of coaching insights drawn from real chess
+# instruction (Aagaard, Dvoretsky, Soltis, Watson, Smirnov, Yusupov, Silman,
+# de la Villa, Nunn, Karpov, Kasparov, Hellsten, Bronznik). The planner pulls
+# a random batch into the user prompt as STYLE EXAMPLES — the LLM is told to
+# match this depth, NOT to copy them verbatim.
+#
+# Each entry: a *concrete* habit/idea/technique a 1500–1900 player can act on.
+# Allowed: name pawn structures, name moves, name plans, reference master games.
+# Banned: "play actively", "develop pieces", "control the center" (too vague).
+
+bishops:
+  - title: "Trade your bad bishop, not your good one"
+    body: "If your light-square bishop is hemmed in by your own pawns on light squares, get it off the board even at the cost of a tempo. Karpov did this for 30 years."
+  - title: "The fianchetto bishop guards squares, not pawns"
+    body: "A Bg2 fianchetto isn't there to defend g2, it's there to dominate the long diagonal. If a trade neutralizes it, you've usually been outplayed."
+  - title: "Bishop pair = 0.5 pawns, but only in open positions"
+    body: "Open the position before cashing in the pair. With locked pawns, two knights are objectively stronger. Don't trade them away in the wrong structure."
+  - title: "Don't let the opposite-colored bishop offer save the worse side"
+    body: "If you're winning, KEEP queens or rooks on. Bare opposite-colored bishop endgames are notorious draw factories even two pawns up."
+
+knights:
+  - title: "An outpost on d5/d4 is worth a tempo to install"
+    body: "If you can plant a knight on a square that no enemy pawn can ever attack, spend a move to get it there. Once anchored, it's worth a full minor piece's tempo to dislodge."
+  - title: "Knights before bishops, but only when it's true"
+    body: "The 'knights before bishops' rule fails the moment a bishop has a clear diagonal. In the Italian, develop Bc4 first. The rule is a default, not a law."
+  - title: "Centralize a stranded knight via the rim"
+    body: "Knight on a3 going to c2-e3-d5 is a real plan, not desperation. Three moves of routing is normal in slow positions."
+
+rooks:
+  - title: "The rook on the 7th wants the rook on the 8th"
+    body: "A single rook on the 7th rank harasses; doubled rooks on the 7th are usually decisive. Look for a way to swing the second one over."
+  - title: "Open files only matter if you can land on the 7th"
+    body: "A rook on a half-open file that ends at a defended square is just a heavy piece. Check the landing zone before committing to the file."
+  - title: "Lift the rook before the attack, not during"
+    body: "Re1-e3-g3 is a classic kingside attack lift. If you wait until pieces are already swarming, the rook is too slow."
+
+pawns:
+  - title: "Doubled pawns are weak only if they can be attacked"
+    body: "Doubled f-pawns covering e5/g5 and supporting an outpost are an asset. The Tartakower QGD is built on this idea. Don't auto-fix doubled pawns."
+  - title: "The IQP wants pieces, not trades"
+    body: "If you have an isolated d-pawn, every minor piece trade brings you closer to losing. The owner attacks, the defender exchanges."
+  - title: "Pawn breaks are limited per position — don't waste yours"
+    body: "Most middlegames have one or two real pawn breaks (c4-c5, f2-f4, b2-b4). Identify them in advance, prepare them, and only execute when you've out-prepared the response."
+  - title: "Passed pawns must be pushed — but blockaded first if enemy"
+    body: "Nimzowitsch's rule still holds. Knight is the best blockader, then bishop, then king in endgames. Rook is the worst — it has nothing to do behind the pawn."
+
+king_safety:
+  - title: "h2-h3 is rarely 'just a luft' — it's an admission"
+    body: "Playing h3 unprovoked usually concedes g3 as a hole and slows the kingside attack. Only play it when the back-rank threat is concrete."
+  - title: "Castle into the side with the pawn majority"
+    body: "If you have an extra pawn on the queenside, castle kingside. Your majority will become a passed pawn far from your king."
+  - title: "Three minor pieces beat a queen in attack"
+    body: "If you can trade Q for two minors plus a rook in the attack zone, the king's defenders evaporate. Tal proved this 100 times."
+
+endgames:
+  - title: "Rook endings: activity > pawn count"
+    body: "An active rook plus connected passed pawns beats a passive rook a pawn up most of the time. Lasker's rule: get your rook behind your passer."
+  - title: "Opposition is a triangle, not a line"
+    body: "In K+P endings, the defending king triangulates to keep distant opposition. Practice the Reti maneuver — it's the single highest-leverage endgame trick."
+  - title: "Knight endings = pawn endings + one tempo"
+    body: "Most pawn-ending plans (zugzwang, opposition, key squares) carry over directly. The knight's quirk is one extra tempo move via the rim."
+  - title: "Two bishops vs knight wins reliably above 1700"
+    body: "Below 1700 it's drawn 60% of the time from poor technique. Drill the Centurini barrier and the wrong-bishop bishop sac on the rook pawn."
+
+calculation:
+  - title: "Candidate moves first, evaluation last"
+    body: "Force yourself to list 3 candidates BEFORE calculating any line. Most blunders come from calculating the wrong move deeply."
+  - title: "Quiet move at the end of forcing lines"
+    body: "After every check/capture sequence, ask: is there a quiet move now that wins? The hardest tactics end on a non-forcing move."
+  - title: "Don't trust intermediate positions you've never seen"
+    body: "If your line lands in a position you can't evaluate cleanly, don't go there. The opponent has resources you can't see from move zero."
+
+opening:
+  - title: "Memorize plans, not 20 moves of theory"
+    body: "Pick one e4 line and one d4 line. Learn the typical pawn break and the typical piece arrangement. The first deviation, you're already on plan."
+  - title: "Avoid forcing lines below 2000"
+    body: "Sharp gambits punish the prepared, not the prepared-against. As you climb, your unprepared opponents will find moves you didn't expect."
+  - title: "Trade pieces when ahead in development"
+    body: "An extra developed piece is worth a half-pawn now and zero pawns in 10 moves. Trade off; convert."
+
+psychology:
+  - title: "After a blunder, take 3 minutes — not 30 seconds"
+    body: "Most rating points are lost in the move RIGHT AFTER a mistake. Reset, reassess, don't try to win the lost game in one move."
+  - title: "Time pressure: switch to one-candidate decisions"
+    body: "Below 30 seconds, stop hunting for the best move. Find the safe move and play it. Most blitz losses are fancy moves played 0.4s too late."

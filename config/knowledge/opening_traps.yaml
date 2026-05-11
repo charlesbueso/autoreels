@@ -1,0 +1,106 @@
+# Curated catalog of REAL, verified opening traps.
+# Each `pgn` is a list of SAN tokens (no move numbers, no annotation).
+# `trap_ply` is the 1-based index of the trap-springing / killing move.
+# `losing_move` names the natural move that walked into the trap.
+# `refutation` is a one-sentence factual explanation of why the trap works.
+#
+# All lines were hand-verified — do NOT let the LLM rewrite them.
+
+- id: legals_mate
+  name: "Legal's Mate"
+  eco: "C41"
+  opening: "Philidor Defense"
+  pgn: ["e4", "e5", "Nf3", "d6", "Bc4", "Bg4", "Nc3", "g6", "Nxe5", "Bxd1", "Bxf7+", "Ke7", "Nd5#"]
+  trap_ply: 9        # Nxe5 — the queen sac
+  killing_ply: 13    # Nd5#
+  losing_move: "Bg4 (pinning the knight is the wrong idea when the bishop is undefended)"
+  refutation: "After 5.Nxe5! Bxd1?? loses to 6.Bxf7+ Ke7 7.Nd5#. If Black declines with 5...dxe5, then 6.Qxg4 wins a clean pawn."
+  lesson: "Don't pin a knight that points at f7 with an undefended bishop — the 'pin' isn't really a pin."
+
+- id: fried_liver
+  name: "Fried Liver Attack"
+  eco: "C57"
+  opening: "Italian Game, Two Knights"
+  pgn: ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nf6", "Ng5", "d5", "exd5", "Nxd5", "Nxf7"]
+  trap_ply: 11       # Nxf7! the knight sac
+  killing_ply: 11
+  losing_move: "Nxd5?! (recapturing the pawn straight away — the Lolli variation 5...Na5 is safer)"
+  refutation: "After 6.Nxf7! Kxf7 7.Qf3+ Ke6 8.Nc3, White is down a piece but Black's king is stuck on e6 with no safe square — the attack is decisive at club level."
+  lesson: "In the Two Knights, 5...Nxd5 looks natural but invites the Fried Liver. Learn 5...Na5 or be ready to defend a king march."
+
+- id: englund_qe7
+  name: "Englund Gambit Qe7 Trap"
+  eco: "A40"
+  opening: "Englund Gambit"
+  pgn: ["d4", "e5", "dxe5", "Nc6", "Nf3", "Qe7", "Bf4", "Qb4+", "Bd2", "Qxb2", "Bc3", "Bb4", "Qd2", "Bxc3", "Qxc3", "Qc1#"]
+  trap_ply: 16       # Qc1#
+  killing_ply: 16
+  losing_move: "Qd2?? (any move other than Nc3, Nbd2, or Qd2 walks into it; here Qd2 is the classic blunder)"
+  refutation: "After 8.Qd2?? Bxc3 9.Qxc3 Qc1# is mate on the back rank — the queen has nowhere to go because b1 is covered by the queen on c1."
+  lesson: "When you're up material early, every move still has to address concrete threats. Greedy queens get mated."
+
+- id: lasker_trap
+  name: "Lasker Trap"
+  eco: "D08"
+  opening: "Albin Counter-Gambit"
+  pgn: ["d4", "d5", "c4", "e5", "dxe5", "d4", "e3", "Bb4+", "Bd2", "dxe3", "Bxb4", "exf2+", "Ke2", "fxg1=N+"]
+  trap_ply: 14       # fxg1=N+ — the underpromotion!
+  killing_ply: 14
+  losing_move: "e3? (the natural-looking pawn move) and 6.Bxb4?? grabbing the bishop"
+  refutation: "After 7.Ke2 fxg1=N+! is one of the few opening lines where an underpromotion to a knight is winning — Black emerges up a piece with an active position."
+  lesson: "Underpromotion isn't just a puzzle theme — sometimes a queen on g1 would be captured for free while a knight forks and survives."
+
+- id: elephant_trap
+  name: "Elephant Trap"
+  eco: "D63"
+  opening: "Queen's Gambit Declined"
+  pgn: ["d4", "d5", "c4", "e6", "Nc3", "Nf6", "Bg5", "Nbd7", "cxd5", "exd5", "Nxd5", "Nxd5", "Bxd8", "Bb4+"]
+  trap_ply: 14       # Bb4+ — the zwischenschach that wins the bishop
+  killing_ply: 14
+  losing_move: "Nxd5?? (the greedy knight grab — White thinks Black can't recapture because of the queen pin)"
+  refutation: "After 7.Nxd5?? Nxd5! 8.Bxd8 Bb4+! 9.Qd2 (or Kd2/Nd2) Bxd2+ 10.Kxd2 Kxd8 — Black is simply up a piece."
+  lesson: "Before grabbing a 'pinned' piece, check for intermediate checks. The pin only works if every Black reply is forced."
+
+- id: noahs_ark
+  name: "Noah's Ark Trap"
+  eco: "C77"
+  opening: "Ruy Lopez"
+  pgn: ["e4", "e5", "Nf3", "Nc6", "Bb5", "a6", "Ba4", "d6", "d4", "b5", "Bb3", "Nxd4", "Nxd4", "exd4", "Qxd4", "c5", "Qd5", "Be6", "Qc6+", "Bd7", "Qd5", "c4"]
+  trap_ply: 22       # ...c4! — the bishop is trapped on b3
+  killing_ply: 22
+  losing_move: "Bb3 (the natural retreat — but the c-pawn march closes the diagonal)"
+  refutation: "After 11...c4! the bishop on b3 has no escape: a4 is covered by the b5-pawn, c2 needs the queen to move, and the bishop is lost next move."
+  lesson: "In the Ruy Lopez, watch the b3 bishop's diagonal. Black's queenside pawns can lock it in if you grab the d4 pawn too early."
+
+- id: monticelli_trap
+  name: "Monticelli Trap"
+  eco: "E12"
+  opening: "Bogo-Indian Defense"
+  pgn: ["d4", "Nf6", "c4", "e6", "Nf3", "b6", "g3", "Bb7", "Bg2", "Bb4+", "Bd2", "Bxd2+", "Nbxd2", "O-O", "O-O", "d6", "Qc2", "Nbd7", "Ng5", "Bxg2", "Kxg2", "Re8", "Nde4"]
+  trap_ply: 23       # Nde4 — both knights aim at f6 and Black has no escape
+  killing_ply: 23
+  losing_move: "...Bxg2?? was already the losing move (allowing the second knight to join in)"
+  refutation: "Now ...Nxe4 fails to Nxe4 with a winning attack, and the threats on f6 plus h7 are decisive — White wins a piece or mates."
+  lesson: "Trading off a bishop without preventing the second knight's arrival can be fatal in fianchetto structures."
+
+- id: blackburne_shilling
+  name: "Blackburne Shilling Gambit"
+  eco: "C50"
+  opening: "Italian Game"
+  pgn: ["e4", "e5", "Nf3", "Nc6", "Bc4", "Nd4", "Nxe5", "Qg5", "Nxf7", "Qxg2", "Rf1", "Qxe4+", "Be2", "Nf3#"]
+  trap_ply: 14       # Nf3#
+  killing_ply: 14
+  losing_move: "Nxe5?? (greedy — White should play c3 or 0-0 to question the knight on d4)"
+  refutation: "After 4.Nxe5?? Qg5! threatens both Nxf7 forks and Qxg2 — White's natural 5.Nxf7 fails to ...Qxg2 6.Rf1 Qxe4+ 7.Be2 Nf3#."
+  lesson: "If your opponent plays a strange-looking move on move 3 or 4, ask 'what does it threaten?' before grabbing the offered material."
+
+- id: halosar_trap
+  name: "Halosar Trap"
+  eco: "D00"
+  opening: "Blackmar-Diemer Gambit"
+  pgn: ["d4", "d5", "e4", "dxe4", "Nc3", "Nf6", "f3", "exf3", "Qxf3", "Qxd4", "Be3", "Qb4", "O-O-O", "Bg4", "Nb5", "Na6", "Qxb7", "Qe4", "Qxa8+"]
+  trap_ply: 19       # Qxa8+ — White grabs the rook because the queen is overloaded
+  killing_ply: 19
+  losing_move: "Qxd4?? (the queen grab — Black is now too far behind in development to survive)"
+  refutation: "After 10.Qxb7 Qe4 11.Qxa8+ wins the rook, and Black's queen on e4 can't simultaneously defend a8 and stop the threats on the queenside."
+  lesson: "Accepting a gambit pawn is fine; chasing a second pawn with your queen while undeveloped is suicide."
